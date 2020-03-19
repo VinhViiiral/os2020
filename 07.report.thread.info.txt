@@ -1,0 +1,6 @@
+viiiiral@viiiiral-VirtualBox:~$ ps -A
+
+1940 tty2     00:00:18 firefox
+
+viiiiral@viiiiral-VirtualBox:~$ ps -o nlwp 1904
+NLWP
