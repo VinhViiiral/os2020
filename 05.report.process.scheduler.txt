@@ -1,0 +1,44 @@
+viiiiral@viiiiral-VirtualBox:~$ cat /proc/sched_debug|grep systemd
+ S        systemd     1      2173.982848     40843   120         0.000000      2641.040622         0.000000 0 0 /autogroup-2
+ Ssystemd-journal   278       196.838710      2705   119         0.000000       246.617626         0.000000 0 0 /autogroup-6
+ S  systemd-udevd   297      2566.556088      1501   120         0.000000       281.488796         0.000000 0 0 /autogroup-14
+ Ssystemd-resolve   363       117.436505       616   120         0.000000       118.629935         0.000000 0 0 /autogroup-25
+ Ssystemd-timesyn   364        38.879550        97   120         0.000000        40.093287         0.000000 0 0 /autogroup-26
+ S systemd-logind   572       202.263767     10813   120         0.000000       203.484528         0.000000 0 0 /autogroup-46
+ S        systemd   883       124.307908       227   120         0.000000       112.910486         0.000000 0 0 /autogroup-71
+ S        systemd  1410       163.777356       567   120         0.000000       155.256859         0.000000 0 0 /autogroup-88
+ Sapt.systemd.dai  3691        25.349022        17   120         0.000000         4.359755         0.000000 0 0 /autogroup-117
+ Sapt.systemd.dai  3695       586.291884        19   120         0.000000         1.761549         0.000000 0 0 /autogroup-117
+
+viiiiral@viiiiral-VirtualBox:~$ cat /proc/3695/sched
+apt.systemd.dai (3695, #threads: 1)
+-------------------------------------------------------------------
+se.exec_start                                :       1607889.370319
+se.vruntime                                  :           586.291884
+se.sum_exec_runtime                          :             1.761549
+se.nr_migrations                             :                    0
+nr_switches                                  :                   19
+nr_voluntary_switches                        :                   18
+nr_involuntary_switches                      :                    1
+se.load.weight                               :              1048576
+se.runnable_weight                           :              1048576
+se.avg.load_sum                              :                 1188
+se.avg.runnable_load_sum                     :                 1188
+se.avg.util_sum                              :               514928
+se.avg.load_avg                              :                   21
+se.avg.runnable_load_avg                     :                   21
+se.avg.util_avg                              :                    6
+se.avg.last_update_time                      :        1607889370112
+se.avg.util_est.ewma                         :                   22
+se.avg.util_est.enqueued                     :                    7
+policy                                       :                    0
+prio                                         :                  120
+clock-delta                                  :                   60
+mm->numa_scan_seq                            :                    0
+numa_pages_migrated                          :                    0
+numa_preferred_nid                           :                   -1
+total_numa_faults                            :                    0
+current_node=0, numa_group_id=0
+numa_faults node=0 task_private=0 task_shared=0 group_private=0 group_shared=0
+
+
